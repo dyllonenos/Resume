@@ -4,7 +4,7 @@
  */
 function showMenu(nav_id) {
     const links_button = document.getElementById(nav_id);
-    links_button.style.width = "150px";
+    links_button.style.width = "200px";
 }
 
 /**

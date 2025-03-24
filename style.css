@@ -2,29 +2,41 @@ html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
+.header {
 
-.topSection {
-    display: flex;
+}
+
+.navigation_menu {
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.navigation_menu #logo {
+    float: left;
 }
 
 .navigation_menu .icon {
     max-width: 51px;
     max-height: 51px;
+    float: right;
 }
 
-.topSection #open-button{
+.navigation_menu #open-button{
     fill: black;
     border: none;
     background: none;
+    right: 0;
+    float: right;
 }
 
 .sideNav {
-    height: 30%; /* 100% Full-height */
+    height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay at the top */
     top: 0;
-    left: 0;
+    right: 0;
     background-color: white;
     overflow-x: hidden; /* Disable orizontal scroll */
     padding-top: 60px;
@@ -63,11 +75,6 @@ html {
     width: 50%;
     padding: 10px;
     text-shadow: 1px 1px black;
-}
-
-#home_background {
-    background: url("Images/wedding.jpeg");
-    background-size: cover;
 }
 
 @keyframes fadeIn {
