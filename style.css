@@ -1,36 +1,66 @@
+/* Font settings for entire website. */
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
 }
+
+/* Header section of the website. */
 .header {
-
+    background-color: goldenrod;
+    margin: 0; /* Removes brouser setting defaults */
+    padding: 0; /* Removes brouser setting defaults */
+    color: white;
+    text-align: center;
 }
 
-.navigation_menu {
+/* Horizontal navigation section of the website. */
+.horizontalNav {
     display: inline;
-    padding-right: 10px;
-    padding-left: 10px;
 }
 
-.navigation_menu #logo {
+/* Website logo. */
+.horizontalNav #logo {
     float: left;
+    max-height: 68px;
 }
 
-.navigation_menu .icon {
-    max-width: 51px;
-    max-height: 51px;
-    float: right;
+/* Links section for horizontal navigation bar. */
+.horizontalNav .navLinks {
+    list-style-type: none; /* Removes the bullets. */
+    margin: 0; /* Removes brouser setting defaults */
+    padding: 0; /* Removes brouser setting defaults */
+    overflow: hidden;
+    background-color: navy; /* Sets background color */
+  }
+
+/* Individual links for naviation bar. */
+.navLinks li {
+    float: right; /* We want links on the right side of the page. */
+    padding: 25px; /* Give some padding between links. */
 }
 
-.navigation_menu #open-button{
+/* What happens when you hover the mouse over the link. */
+.navLinks li:hover, li:active {
+    background-color: goldenrod;
+}
+
+/* Text of individual links. */
+.navLinks a {
+    color: white;
+    text-decoration: none;
+}
+
+  /* The open button for vertical navigation links for smaller screens. */
+.horizontalNav #open-button{
     fill: black;
     border: none;
     background: none;
     right: 0;
     float: right;
+    display: none;
 }
 
-.sideNav {
+/* Vertical navigation bar. */
+.verticalNav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
@@ -46,7 +76,8 @@ html {
     border-radius: 25px;
 }
 
-.sideNav a {
+/* Links for vertical navigation bar. */
+.verticalNav a {
     color: goldenrod;
     padding: 14px 25px;
     text-align: center;
@@ -55,6 +86,7 @@ html {
     transition: 1s;
 }
 
+/* Close button for vertical navigation bar. */
 #close-button {
     fill: black;
     position: absolute;
@@ -66,17 +98,18 @@ html {
     background: none;
 }
 
+/* Contents section of the page. */
 .contents {
-    color: navy;
+    color: black;
     animation: fadeIn 1s;
     align-items: center;
     flex-direction: column;
     margin: auto;
     width: 50%;
     padding: 10px;
-    text-shadow: 1px 1px black;
 }
 
+/* Animations for page. */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -87,7 +120,12 @@ html {
     to {opacity: 0;}
 }
 
+/* For smaller/mobile screens. */
 @media screen and (max-height: 450px) {
-    .sideNav { padding-top: 15px;}
-    .sideNav a { font-size: 18px;}
+    .horizontalNav a { display: none; }
+    .verticalNav { 
+        padding-top: 15px;
+        display: flex;
+    }
+    .verticalNav a { font-size: 18px;}
 }
